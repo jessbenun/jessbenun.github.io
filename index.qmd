@@ -1,10 +1,11 @@
 ---
 title: "Welcome to My Website"
 author: "Jessica Benun"
-date: "2026-03-22"
+date: today
 format:
   html:
-    theme: journal
+    theme: simplex
+    css: styles.css
     toc: true
 ---
 # Hello, World!

@@ -2,17 +2,27 @@ project:
   type: website
 
 website:
-  title: "jessbenun.github.io"
+  title: "Jessica Benun's Portfolio"
+  description: "A collection of my work and projects."
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About Me
+      - href: jbenun_system_info.qmd
+        text: Assignment 01 - System Information  
+    right:
+      - icon: github
+        href: https://github.com/jessbenun
+        aria-label: GitHub
+  page-footer: "© 2026 Jessica Benun. All rights reserved."
+
 
 format:
   html:
     theme:
-      - cosmo
+      - simplex
       - brand
     css: styles.css
     toc: true
