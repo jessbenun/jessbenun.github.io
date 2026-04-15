@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jessbenun.github.io/jbenun_system_info.html</loc>
-    <lastmod>2026-03-22T17:05:22.686Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jessbenun.github.io/index.html</loc>
-    <lastmod>2026-03-22T17:05:22.686Z</lastmod>
+    <loc>https://jessbenun.github.io/contact.html</loc>
+    <lastmod>2026-04-15T00:07:54.520Z</lastmod>
   </url>
   <url>
     <loc>https://jessbenun.github.io/about.html</loc>
-    <lastmod>2026-03-22T17:05:22.686Z</lastmod>
+    <lastmod>2026-04-15T00:07:54.520Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jessbenun.github.io/cv.html</loc>
+    <lastmod>2026-04-15T00:07:54.520Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jessbenun.github.io/jbenun_system_info.html</loc>
+    <lastmod>2026-04-15T00:07:54.520Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jessbenun.github.io/projects.html</loc>
+    <lastmod>2026-04-15T00:07:54.520Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jessbenun.github.io/index.html</loc>
+    <lastmod>2026-04-15T00:07:54.520Z</lastmod>
   </url>
 </urlset>
