@@ -2,9 +2,9 @@
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "Jessica Benun's Portfolio",
+    "title": "Contact Information",
     "section": "",
-    "text": "Email: jessicabenun@yahoo.com\nLinkedIn: www.linkedin.com/in/jessica-benun\nPhone Number: 401-318-6307"
+    "text": "Below is my contact information. Please feel free to reach out to me with any questions, opportunities, or collaborations.\nEmail: jessicabenun@yahoo.com\nLinkedIn: www.linkedin.com/in/jessica-benun\nPhone Number: 401-318-6307"
   },
   {
     "objectID": "about.html",
@@ -16,7 +16,7 @@
   {
     "objectID": "cv.html",
     "href": "cv.html",
-    "title": "Jessica Benun's Portfolio",
+    "title": "Resume",
     "section": "",
     "text": "You can download my full curriculum vitae below.\nDownload CV"
   },
@@ -25,13 +25,13 @@
     "href": "jbenun_system_info.html",
     "title": "Assignment 01",
     "section": "",
-    "text": "# echo: true\n# eval: true\n\nimport platform\nimport psutil\n\nprint(\"Operating System:\", platform.system(), platform.release())\nprint(\"Python Version:\", platform.python_version())\nprint(\"Machine:\", platform.machine())\nprint(\"Processor:\", platform.processor())\n\nmem = psutil.virtual_memory()\nprint(\"Total Memory (MB):\", round(mem.total / (1024**2), 2))\nprint(\"Available Memory (MB):\", round(mem.available / (1024**2), 2))\n\nOperating System: Linux 6.17.0-1010-azure\nPython Version: 3.12.13\nMachine: x86_64\nProcessor: x86_64\nTotal Memory (MB): 15989.71\nAvailable Memory (MB): 14576.0"
+    "text": "# echo: true\n# eval: true\n\nimport platform\nimport psutil\n\nprint(\"Operating System:\", platform.system(), platform.release())\nprint(\"Python Version:\", platform.python_version())\nprint(\"Machine:\", platform.machine())\nprint(\"Processor:\", platform.processor())\n\nmem = psutil.virtual_memory()\nprint(\"Total Memory (MB):\", round(mem.total / (1024**2), 2))\nprint(\"Available Memory (MB):\", round(mem.available / (1024**2), 2))\n\nOperating System: Linux 6.17.0-1010-azure\nPython Version: 3.12.13\nMachine: x86_64\nProcessor: x86_64\nTotal Memory (MB): 15989.71\nAvailable Memory (MB): 14472.39"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome to My Website",
+    "title": "Jessica Benun’s Portfolio",
     "section": "",
-    "text": "Hello, World!\nWelcome to my Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Welcome to my Quarto website. Here, you can explore my projects, learn about my background, and find ways to contact me. I am passionate about leveraging data and analytics to drive insights and make informed decisions. Feel free to browse through the different sections to learn more about my work and experience."
   }
 ]
