@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact Information",
-    "section": "",
-    "text": "Below is my contact information. Please feel free to reach out to me with any questions, opportunities, or collaborations.\nEmail: jessicabenun@yahoo.com\nLinkedIn: www.linkedin.com/in/jessica-benun\nPhone Number: 401-318-6307"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "I earned my Bachelor of Science in Biology from Quinnipiac University, where I developed a strong analytical mindset and attention to detail. After graduating, I pivoted into the finance field and began my career as a Project Accountant at WSP.\nSince joining WSP, I have advanced to a Project Accountant Lead role, where I manage complex financial projects, lead and mentor team members, and support the Finance Director for the Building Structures division across the country. This experience has strengthened my leadership skills and deepened my understanding of financial operations at scale.\nCurrently, I am pursuing a Master of Science in Business Analytics at Boston University, where I am expanding my technical skill set and gaining expertise in data-driven decision-making. My goal is to continue growing within the business and finance space while leveraging analytics to drive smarter financial strategies and insights.\nI am highly organized, detail-oriented, and a fast learner, with a collaborative approach that allows me to work effectively across teams. I enjoy tackling new challenges, optimizing processes, and contributing to both team success and organizational growth."
+  },
+  {
+    "objectID": "jbenun_system_info.html",
+    "href": "jbenun_system_info.html",
+    "title": "Assignment 01",
+    "section": "",
+    "text": "# echo: true\n# eval: true\n\nimport platform\nimport psutil\n\nprint(\"Operating System:\", platform.system(), platform.release())\nprint(\"Python Version:\", platform.python_version())\nprint(\"Machine:\", platform.machine())\nprint(\"Processor:\", platform.processor())\n\nmem = psutil.virtual_memory()\nprint(\"Total Memory (MB):\", round(mem.total / (1024**2), 2))\nprint(\"Available Memory (MB):\", round(mem.available / (1024**2), 2))\n\nOperating System: Linux 6.17.0-1010-aws\nPython Version: 3.12.3\nMachine: x86_64\nProcessor: x86_64\nTotal Memory (MB): 7935.53\nAvailable Memory (MB): 4133.5"
   },
   {
     "objectID": "cv.html",
@@ -21,11 +21,11 @@
     "text": "You can download my full curriculum vitae below.\nDownload CV"
   },
   {
-    "objectID": "jbenun_system_info.html",
-    "href": "jbenun_system_info.html",
-    "title": "Assignment 01",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact Information",
     "section": "",
-    "text": "# echo: true\n# eval: true\n\nimport platform\nimport psutil\n\nprint(\"Operating System:\", platform.system(), platform.release())\nprint(\"Python Version:\", platform.python_version())\nprint(\"Machine:\", platform.machine())\nprint(\"Processor:\", platform.processor())\n\nmem = psutil.virtual_memory()\nprint(\"Total Memory (MB):\", round(mem.total / (1024**2), 2))\nprint(\"Available Memory (MB):\", round(mem.available / (1024**2), 2))\n\nOperating System: Linux 6.17.0-1010-azure\nPython Version: 3.12.13\nMachine: x86_64\nProcessor: x86_64\nTotal Memory (MB): 15989.71\nAvailable Memory (MB): 14472.39"
+    "text": "Below is my contact information. Please feel free to reach out to me with any questions, opportunities, or collaborations.\nEmail: jessicabenun@yahoo.com\nLinkedIn: www.linkedin.com/in/jessica-benun\nPhone Number: 401-318-6307"
   },
   {
     "objectID": "index.html",
