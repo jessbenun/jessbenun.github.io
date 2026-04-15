@@ -25,7 +25,7 @@ website:
 format:
   html:
     theme:
-      - lux
+      - simplex
     css: styles.css
     toc: true
 

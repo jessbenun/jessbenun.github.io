@@ -1,5 +1,11 @@
-Email: jessicabenun@yahoo.com
+---
+title: "Contact Information"
+---
 
-LinkedIn: www.linkedin.com/in/jessica-benun
+Below is my contact information. Please feel free to reach out to me with any questions, opportunities, or collaborations.
 
-Phone Number: 401-318-6307
+**Email:** [jessicabenun@yahoo.com](mailto:jessicabenun@yahoo.com)
+
+**LinkedIn:** [www.linkedin.com/in/jessica-benun](https://www.linkedin.com/in/jessica-benun)
+
+**Phone Number:** [401-318-6307](tel:4013186307)

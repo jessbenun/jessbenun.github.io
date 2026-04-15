@@ -1,5 +1,5 @@
 ---
-title: "Welcome to My Website"
+title: "Jessica Benun's Portfolio"
 author: "Jessica Benun"
 date: today
 format:
@@ -8,7 +8,4 @@ format:
     css: styles.css
     toc: true
 ---
-# Hello, World!
-Welcome to my Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Welcome to my Quarto website. Here, you can explore my projects, learn about my background, and find ways to contact me. I am passionate about leveraging data and analytics to drive insights and make informed decisions. Feel free to browse through the different sections to learn more about my work and experience.

@@ -1,3 +1,7 @@
+---
+title: "Resume"
+---
+
 You can download my full curriculum vitae below.
 
 [Download CV](assets/JessicaBenun_CV.pdf){.btn .btn-primary}
