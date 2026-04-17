@@ -1,40 +1,783 @@
-/* css styles */
-/*-- scss:defaults --*/
-$h2-font-size:          1.6rem !default;
-$headings-font-weight:  500 !default;
-
-/*-- scss:rules --*/
-h1, h2, h3, h4, h5, h6 {
-  text-transform: none;
-  letter-spacing: normal;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.739);
+/* ── Custom properties ── */
+:root {
+  --accent: #dc2626;
+  --accent-light: #fee2e2;
+  --text-main: #1e1e2e;
+  --text-muted: #6b7280;
+  --bg: #ffffff;
+  --radius: 12px;
 }
 
+/* ── Navbar ── */
 .navbar {
-  background-color: #ce1500d6 !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: none !important;
 }
-
-.navbar .navbar-brand,
-.navbar .nav-link,
-.navbar .navbar-title {
-  color: #ffffff!important;
+.navbar-brand,
+.navbar .nav-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
 }
-
 .navbar .nav-link:hover {
-  color: #000000 !important;
+  color: var(--accent) !important;
+}
+.navbar .nav-link.active {
+  color: var(--accent) !important;
+  border-bottom: 2px solid var(--accent);
 }
 
-.navbar .nav-link.active {
-  color: #ffffff !important;
-  font-weight: 700;
-  border-bottom: 3px solid #ffffff;
+/* ── Page body ── */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-main);
+  background: var(--bg);
+  line-height: 1.75;
 }
 
-.navbar .nav-link.active {
-  color: #ffffff !important;
-  background-color: #ce15008d !important;
+/* ── Headings ── */
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: -0.3px;
+}
+h1 { font-size: 2.2rem; margin-bottom: 0.4rem; }
+h2 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--accent-light);
+  padding-bottom: 6px;
+  margin-top: 2rem;
+}
+
+/* ── Hero section (index.qmd) ── */
+.hero {
+  min-height: 80vh;
+  background: linear-gradient(135deg, #1a0000 0%, #4a0a0a 40%, #7a0a0a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  background: #dc2626;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  top: -150px; left: -100px;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  background: #b91c1c;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  bottom: -100px; right: -80px;
+}
+.hero-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  padding: 48px 56px;
+  max-width: 540px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero-card h1 { color: #fff; font-size: 2.4rem; margin-bottom: 8px; }
+.hero-card p  { color: rgba(255,255,255,0.75); margin-bottom: 24px; }
+
+/* ── Skill / tag pills ── */
+.tag-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 28px; }
+.tag {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.9);
+  font-family: monospace;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+/* ── CTA buttons ── */
+.btn-hero-primary {
+  background: rgba(255,255,255,0.92);
+  color: #450a0a;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 26px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.btn-hero-primary:hover { background: #fff; transform: translateY(-2px); color: #3b0764; }
+
+.btn-hero-ghost {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 26px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+  margin-left: 10px;
+}
+.btn-hero-ghost:hover { background: rgba(255,255,255,0.16); transform: translateY(-2px); color: #fff; }
+
+/* ── Project cards ── */
+.project-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.12);
+  transform: translateY(-3px);
+}
+.project-card .proj-tag {
+  background: var(--accent-light);
+  color: #7f1d1d;
+  font-family: monospace;
+  font-size: 11px;
+  padding: 3px 10px;
   border-radius: 6px;
-  font-weight: 700;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  margin-right: 6px;
+}
+.project-card h3 { margin: 12px 0 6px; font-size: 1.1rem; }
+.project-card p  { color: var(--text-muted); font-size: 0.9rem; }
+
+/* ── CV download button ── */
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff !important;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+  margin-bottom: 2rem;
+}
+.cv-download:hover { opacity: 0.88; transform: translateY(-2px); }
+
+/* ── Contact form ── */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-bottom: 14px;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+}
+.contact-form button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.contact-form button:hover { opacity: 0.88; }
+
+/* ── Footer ── */
+.nav-footer {
+  border-top: 1px solid #e5e7eb;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hero-card { padding: 32px 20px; }
+  h1 { font-size: 1.7rem; }
+  .btn-hero-ghost { margin-left: 0; margin-top: 10px; }
+}
+
+.hero-name {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 8px;
+}
+.hero-role {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 24px;
+}
+
+/* Make navbar transparent and float over the hero */
+.navbar {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent !important;
+  border-bottom: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Make navbar text white so it's visible on the dark hero */
+.navbar-brand,
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+.navbar-brand:hover {
+  color: #ffffff !important;
+}
+
+/* GitHub icon white */
+.navbar .bi-github {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Push the hero up to sit behind the navbar */
+.hero {
+  margin-top: -56px !important; /* height of Quarto's default navbar */
+  padding-top: 100px !important; /* push card content down so it clears the nav */
+}
+
+/* Restore navbar style on non-hero pages */
+body:not(.hero-page) .navbar {
+  position: relative !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+}
+.navbar-brand,
+.navbar .nav-link {
+  color: var(--text-main) !important;
+}
+.hero-page .navbar-brand,
+.hero-page .navbar .nav-link {
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-page .navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.hero-page .navbar-brand:hover {
+  color: #ffffff !important;
+}
+
+.hero-page .navbar .bi-github {
+  color: rgba(255, 255, 255, 0.95) !important;
+  filter: brightness(10);
+}
+
+/* ── Inner pages shared layout ── */
+.page-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+/* ── Page hero banner (replaces plain h1) ── */
+.page-banner {
+  background: linear-gradient(135deg, #1a0000 0%, #4a0a0a 40%, #7a0a0a 100%);
+  padding: 60px 40px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.page-banner h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+.page-banner p {
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ── About page ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.about-stat {
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+.about-stat .stat-number {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #dc2626;
+  display: block;
+  margin-bottom: 4px;
+}
+.about-stat .stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.about-body {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #374151;
+}
+.about-body p { margin-bottom: 1.4rem; }
+
+.skills-section { margin-top: 40px; }
+.skills-section h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-badge {
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  font-family: monospace;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+/* ── CV page ── */
+.cv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #dc2626 !important;
+  color: #fff !important;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none !important;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.cv-download:hover { opacity: 0.88; transform: translateY(-2px); }
+
+.cv-section { margin-bottom: 36px; }
+.cv-section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #dc2626;
+  border-bottom: 2px solid #fee2e2;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+.cv-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+.cv-item-left h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 2px;
+  color: var(--text-main);
+}
+.cv-item-left p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+.cv-item-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-family: monospace;
+}
+
+/* ── Contact page ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-decoration: none !important;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-card:hover {
+  box-shadow: 0 6px 24px rgba(220, 38, 38, 0.12);
+  transform: translateY(-3px);
+  border-color: #fecaca;
+}
+.contact-icon-wrap {
+  width: 44px;
+  height: 44px;
+  background: #fff5f5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc2626;
+  margin-bottom: 8px;
+}
+.contact-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #dc2626;
+  font-weight: 600;
+}
+.contact-value {
+  font-size: 14px;
+  color: #1e1e2e;
+}
+@media (max-width: 600px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Make banner full width (break out of Quarto's container) ── */
+.page-banner {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+  border-radius: 0;
+}
+
+/* ── Add orb effects to banner like the hero ── */
+.page-banner {
+  position: relative;
+  overflow: hidden;
+}
+.page-banner::before {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  background: #ff2222;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  top: -150px; left: -80px;
+  pointer-events: none;
+}
+.page-banner::after {
+  content: '';
+  position: absolute;
+  width: 300px; height: 300px;
+  background: #990000;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  bottom: -100px; right: -60px;
+  pointer-events: none;
+}
+.page-banner h1,
+.page-banner p {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Widen content area ── */
+.page-content {
+  max-width: 900px;
+  padding: 60px 40px;
+}
+
+/* ── Match navbar style to other pages (white, not transparent) ── */
+body:not(.hero-page) .navbar {
+  position: relative !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+body:not(.hero-page) .navbar-brand,
+body:not(.hero-page) .navbar .nav-link {
+  color: #1e1e2e !important;
+  text-shadow: none !important;
+}
+body:not(.hero-page) .navbar .nav-link:hover {
+  color: #dc2626 !important;
+}
+body:not(.hero-page) .navbar .bi-github {
+  color: #1e1e2e !important;
+  filter: none !important;
+}
+
+/* ── Active nav link red underline ── */
+body:not(.hero-page) .navbar .nav-link.active {
+  color: #dc2626 !important;
+  border-bottom: 2px solid #dc2626;
+}
+
+/* ── Smooth page entry animation ── */
+.page-content,
+.page-banner {
+  animation: fadeUp 0.5s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Footer consistent across all pages ── */
+.nav-footer {
+  border-top: 1px solid #fee2e2;
+  background: #fff5f5;
+  color: #991b1b;
+  font-size: 13px;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+/* Remove gap between navbar and banner */
+/* Kill all top spacing before the banner */
+main.content,
+.quarto-container,
+#quarto-content,
+#quarto-document-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.page-banner {
+  margin-top: 0 !important;
+  padding-top: 60px;
+}
+
+/* Hide ONLY Quarto's auto-generated title, not our banner h1 */
+body:not(.hero-page) .quarto-title h1,
+body:not(.hero-page) #title-block-header,
+body:not(.hero-page) h1.title {
+  display: none !important;
+}
+
+/* Make sure banner h1 is always visible */
+.page-banner h1 {
+  display: block !important;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+/* Make hero fill full viewport height */
+.hero {
+  min-height: 100vh !important;
+}
+
+/* Remove any bottom margin/padding after the hero */
+.hero + * {
+  margin-top: 0 !important;
+}
+
+/* Remove extra padding Quarto adds at the bottom of the page */
+#quarto-content {
+  padding-bottom: 0 !important;
+}
+
+.page-rows-contents {
+  min-height: 100vh;
+}
+
+.hero-page .nav-footer {
+  display: none !important;
+}
+
+/* Red navbar for all inner pages */
+body:not(.hero-page) .navbar {
+  background: linear-gradient(135deg, #1a0000 0%, #4a0a0a 40%, #7a0a0a 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+body:not(.hero-page) .navbar-brand,
+body:not(.hero-page) .navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3) !important;
+}
+
+body:not(.hero-page) .navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+
+body:not(.hero-page) .navbar .nav-link.active {
+  color: #ff6b6b !important;
+  border-bottom: 2px solid #ff6b6b;
+}
+
+body:not(.hero-page) .navbar .bi-github {
+  filter: brightness(10) !important;
+}
+
+/* ── Projects grid ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.proj-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.proj-card:hover {
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.1);
+  transform: translateY(-4px);
+  border-color: #fecaca;
+}
+
+.proj-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.proj-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.proj-tag {
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  font-family: monospace;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.proj-github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #6b7280;
+  text-decoration: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+.proj-github-btn:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.proj-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e1e2e;
+  margin: 0;
+}
+
+.proj-desc {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.proj-highlights {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f3f4f6;
+}
+.proj-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.highlight-num {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #dc2626;
+}
+.highlight-label {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.proj-live-btn {
+  font-size: 13px;
+  color: #dc2626;
+  text-decoration: none;
+  font-weight: 500;
+  transition: gap 0.2s;
+}
+.proj-live-btn:hover {
+  color: #b91c1c;
+}
+
+@media (max-width: 600px) {
+  .projects-grid { grid-template-columns: 1fr; }
 }

@@ -1,8 +1,56 @@
 ---
-title: "Resume"
+title: ""
+toc: false
+page-layout: full
 ---
 
-You can download my full curriculum vitae below.
+::: {.page-banner}
+# Curriculum Vitae
+Download my full CV or browse the highlights below
+:::
 
-[Download CV](assets/JessicaBenun_CV.pdf){.btn .btn-primary}
+::: {.page-content}
 
+[⬇ Download PDF](assets/JessicaBenun_CV.pdf){.cv-download}
+
+::: {.cv-section}
+## Education
+
+::: {.cv-item}
+::: {.cv-item-left}
+### MS Business Analytics
+Boston University
+:::
+[2025 – Present]{.cv-item-date}
+:::
+
+::: {.cv-item}
+::: {.cv-item-left}
+### BS Biology
+Quinnipiac University
+:::
+[Graduated 2023]{.cv-item-date}
+:::
+:::
+
+::: {.cv-section}
+## Experience
+
+::: {.cv-item}
+::: {.cv-item-left}
+### Project Accountant Lead
+WSP — Building Structures Division
+:::
+[2026 – Present]{.cv-item-date}
+:::
+
+::: {.cv-item}
+::: {.cv-item-left}
+### Project Accountant
+WSP
+:::
+[2023 – 2026]{.cv-item-date}
+:::
+:::
+
+:::

@@ -1,11 +1,22 @@
 ---
-title: "Jessica Benun's Portfolio"
-author: "Jessica Benun"
-date: today
-format:
-  html:
-    theme: simplex
-    css: styles.css
-    toc: true
+title: ""
+page-layout: custom
+toc: false
+body-classes: hero-page
 ---
-Welcome to my Quarto website. Here, you can explore my projects, learn about my background, and find ways to contact me. I am passionate about leveraging data and analytics to drive insights and make informed decisions. Feel free to browse through the different sections to learn more about my work and experience.
+
+::: {.hero}
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+::: {.hero-card}
+<p class="hero-name">Jessica Benun</p>
+<p class="hero-role">Business Analyst in the Making</p>
+
+::: {.tag-row}
+[Python]{.tag} [R]{.tag} [Machine Learning]{.tag} [SQL]{.tag} [Power BI]{.tag} [Excel]{.tag}
+:::
+
+[View my projects](projects.qmd){.btn-hero-ghost}
+[Download CV](cv.qmd){.btn-hero-ghost}
+:::
+:::

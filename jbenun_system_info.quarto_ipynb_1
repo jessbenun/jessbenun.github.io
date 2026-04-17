@@ -16,7 +16,7 @@
         "  docx: default\n",
         "---"
       ],
-      "id": "c2b0e672"
+      "id": "6838994e"
     },
     {
       "cell_type": "code",
@@ -37,7 +37,7 @@
         "print(\"Total Memory (MB):\", round(mem.total / (1024**2), 2))\n",
         "print(\"Available Memory (MB):\", round(mem.available / (1024**2), 2))"
       ],
-      "id": "e613c26d",
+      "id": "2793a2d3",
       "execution_count": null,
       "outputs": []
     }

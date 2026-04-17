@@ -1,11 +1,42 @@
 ---
-title: "Contact Information"
+title: ""
+toc: false
+page-layout: full
 ---
 
-Below is my contact information. Please feel free to reach out to me with any questions, opportunities, or collaborations.
+::: {.page-banner}
+# Get in Touch
+Open to opportunities, collaborations, and networking
+:::
 
-**Email:** [jessicabenun@yahoo.com](mailto:jessicabenun@yahoo.com)
+::: {.page-content}
+```{=html}
+<div class="contact-grid">
 
-**LinkedIn:** [www.linkedin.com/in/jessica-benun](https://www.linkedin.com/in/jessica-benun)
+  <a class="contact-card" href="mailto:jessicabenun@yahoo.com">
+    <div class="contact-icon-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    </div>
+    <span class="contact-label">Email</span>
+    <span class="contact-value">jessicabenun@yahoo.com</span>
+  </a>
 
-**Phone Number:** [401-318-6307](tel:4013186307)
+  <a class="contact-card" href="https://www.linkedin.com/in/jessica-benun" target="_blank">
+    <div class="contact-icon-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+    </div>
+    <span class="contact-label">LinkedIn</span>
+    <span class="contact-value">linkedin.com/in/jessica-benun</span>
+  </a>
+
+  <a class="contact-card" href="tel:4013186307">
+    <div class="contact-icon-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </div>
+    <span class="contact-label">Phone</span>
+    <span class="contact-value">401-318-6307</span>
+  </a>
+
+</div>
+```
+:::
