@@ -1,37 +1,58 @@
 [
   {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Get in Touch",
+    "section": "",
+    "text": "Get in Touch\nOpen to opportunities, collaborations, and networking\n\n\n\n\n  \n    \n      \n    \n    Email\n    jessicabenun@yahoo.com\n  \n\n  \n    \n      \n    \n    LinkedIn\n    linkedin.com/in/jessica-benun\n  \n\n  \n    \n      \n    \n    Phone\n    401-318-6307"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "I earned my Bachelor of Science in Biology from Quinnipiac University, where I developed a strong analytical mindset and attention to detail. After graduating, I pivoted into the finance field and began my career as a Project Accountant at WSP.\nSince joining WSP, I have advanced to a Project Accountant Lead role, where I manage complex financial projects, lead and mentor team members, and support the Finance Director for the Building Structures division across the country. This experience has strengthened my leadership skills and deepened my understanding of financial operations at scale.\nCurrently, I am pursuing a Master of Science in Business Analytics at Boston University, where I am expanding my technical skill set and gaining expertise in data-driven decision-making. My goal is to continue growing within the business and finance space while leveraging analytics to drive smarter financial strategies and insights.\nI am highly organized, detail-oriented, and a fast learner, with a collaborative approach that allows me to work effectively across teams. I enjoy tackling new challenges, optimizing processes, and contributing to both team success and organizational growth."
+    "text": "Business analyst blending finance, biology, and data science"
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About Me",
+    "section": "Technical skills",
+    "text": "Technical skills\n\nPython R SQL Machine Learning Oracle Excel Power BI"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Download my full CV or browse the highlights below"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "Education",
+    "text": "Education\n\n\nMS Business Analytics\nBoston University\n\n2025 – Present\n\n\n\nBS Biology\nQuinnipiac University\n\nGraduated 2023"
+  },
+  {
+    "objectID": "cv.html#experience",
+    "href": "cv.html#experience",
+    "title": "Curriculum Vitae",
+    "section": "Experience",
+    "text": "Experience\n\n\nProject Accountant Lead\nWSP — Building Structures Division\n\n2026 – Present\n\n\n\nProject Accountant\nWSP\n\n2023 – 2026"
   },
   {
     "objectID": "jbenun_system_info.html",
     "href": "jbenun_system_info.html",
     "title": "Assignment 01",
     "section": "",
-    "text": "# echo: true\n# eval: true\n\nimport platform\nimport psutil\n\nprint(\"Operating System:\", platform.system(), platform.release())\nprint(\"Python Version:\", platform.python_version())\nprint(\"Machine:\", platform.machine())\nprint(\"Processor:\", platform.processor())\n\nmem = psutil.virtual_memory()\nprint(\"Total Memory (MB):\", round(mem.total / (1024**2), 2))\nprint(\"Available Memory (MB):\", round(mem.available / (1024**2), 2))\n\nOperating System: Linux 6.17.0-1010-aws\nPython Version: 3.12.3\nMachine: x86_64\nProcessor: x86_64\nTotal Memory (MB): 7935.53\nAvailable Memory (MB): 4133.5"
+    "text": "# echo: true\n# eval: true\n\nimport platform\nimport psutil\n\nprint(\"Operating System:\", platform.system(), platform.release())\nprint(\"Python Version:\", platform.python_version())\nprint(\"Machine:\", platform.machine())\nprint(\"Processor:\", platform.processor())\n\nmem = psutil.virtual_memory()\nprint(\"Total Memory (MB):\", round(mem.total / (1024**2), 2))\nprint(\"Available Memory (MB):\", round(mem.available / (1024**2), 2))\n\nOperating System: Linux 6.17.0-1010-azure\nPython Version: 3.12.13\nMachine: x86_64\nProcessor: x86_64\nTotal Memory (MB): 15989.71\nAvailable Memory (MB): 14604.06"
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Resume",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "You can download my full curriculum vitae below.\nDownload CV"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact Information",
-    "section": "",
-    "text": "Below is my contact information. Please feel free to reach out to me with any questions, opportunities, or collaborations.\nEmail: jessicabenun@yahoo.com\nLinkedIn: www.linkedin.com/in/jessica-benun\nPhone Number: 401-318-6307"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jessica Benun’s Portfolio",
-    "section": "",
-    "text": "Welcome to my Quarto website. Here, you can explore my projects, learn about my background, and find ways to contact me. I am passionate about leveraging data and analytics to drive insights and make informed decisions. Feel free to browse through the different sections to learn more about my work and experience."
+    "text": "Projects\nAcademic and personal projects in data analytics and machine learning\n\n\n\n\n  \n    \n      \n        PySpark\n        SQL\n        Python\n      \n      \n        \n        View on GitHub\n      \n    \n    Spark SQL & Job Market Analysis\n    Analyzed 70,000+ job postings using Spark SQL and DataFrames to uncover salary trends by job title, rank top companies offering remote roles in California, track monthly posting fluctuations, and compare compensation across major U.S. cities.\n    \n      \n        4\n        SQL queries\n      \n      \n        70K+\n        job postings\n      \n      \n        5\n        U.S. cities\n      \n    \n    View live report →\n  \n\n  \n    \n      \n        PySpark\n        Plotly\n        Big Data\n      \n      \n        \n        View on GitHub\n      \n    \n    Big Data Visualization at Scale\n    Built interactive visualizations across 72,000+ job postings using PySpark and Plotly — including box plots for salary by industry, bubble charts for occupation vs. median pay, scatter plots for experience vs. salary by education level, and histograms comparing remote, hybrid, and onsite compensation.\n    \n      \n        72K+\n        job postings\n      \n      \n        5\n        visualizations\n      \n      \n        3\n        work types\n      \n    \n  \n\n  \n    \n      \n        Machine Learning\n        PySpark\n        Regression\n      \n      \n        \n        View on GitHub\n      \n    \n    Salary Prediction with Regression Models\n    Built and compared four machine learning models — Linear, Generalized Linear, Polynomial, and Random Forest Regression — to predict salaries from 32,000+ job postings. Minimum years of experience was the strongest predictor (72% feature importance in Random Forest), with the best model achieving an RMSE of ~$40,500.\n    \n      \n        4\n        ML models\n      \n      \n        32K+\n        records\n      \n      \n        72%\n        top feature importance"
   }
 ]
