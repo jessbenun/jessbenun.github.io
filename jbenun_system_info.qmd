@@ -1,13 +1,4 @@
----
-title: "Assignment 01"
-subtitle: "System Information Proof"
-author: "Jessica Benun"
-date: today
-date-modified: last-modified
-date-format: long
-format: 
-  html: default
-  docx: default
+
 ---
 ```{python}
 # echo: true
