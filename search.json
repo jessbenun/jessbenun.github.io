@@ -44,9 +44,9 @@
   {
     "objectID": "jbenun_system_info.html",
     "href": "jbenun_system_info.html",
-    "title": "Assignment 01",
+    "title": "Jessica Benun's Portfolio",
     "section": "",
-    "text": "# echo: true\n# eval: true\n\nimport platform\nimport psutil\n\nprint(\"Operating System:\", platform.system(), platform.release())\nprint(\"Python Version:\", platform.python_version())\nprint(\"Machine:\", platform.machine())\nprint(\"Processor:\", platform.processor())\n\nmem = psutil.virtual_memory()\nprint(\"Total Memory (MB):\", round(mem.total / (1024**2), 2))\nprint(\"Available Memory (MB):\", round(mem.available / (1024**2), 2))\n\nOperating System: Linux 6.17.0-1010-azure\nPython Version: 3.12.13\nMachine: x86_64\nProcessor: x86_64\nTotal Memory (MB): 15989.71\nAvailable Memory (MB): 14604.06"
+    "text": "# echo: true\n# eval: true\n\nimport platform\nimport psutil\n\nprint(\"Operating System:\", platform.system(), platform.release())\nprint(\"Python Version:\", platform.python_version())\nprint(\"Machine:\", platform.machine())\nprint(\"Processor:\", platform.processor())\n\nmem = psutil.virtual_memory()\nprint(\"Total Memory (MB):\", round(mem.total / (1024**2), 2))\nprint(\"Available Memory (MB):\", round(mem.available / (1024**2), 2))\n\nOperating System: Linux 6.17.0-1010-azure\nPython Version: 3.12.13\nMachine: x86_64\nProcessor: x86_64\nTotal Memory (MB): 15993.84\nAvailable Memory (MB): 14470.99"
   },
   {
     "objectID": "projects.html",
